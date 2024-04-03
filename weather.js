@@ -33,19 +33,19 @@ function displayWeather(data) {
     // Add appropriate icon based on weather condition
     if (weatherCondition.includes('clear') || weatherCondition.includes('sunny')) {
         weatherIconElement.classList.add('fa-sun');
-        weatherImageElement.style.backgroundImage = "url('images/weather-ico-img1.png')"; // Corrected image extension
+        weatherImageElement.style.backgroundImage = "url('weather-ico-img1.png')"; // Corrected image extension
     } else if (weatherCondition.includes('cloud')) {
         weatherIconElement.classList.add('fa-cloud');
-        weatherImageElement.style.backgroundImage = "url('images/weather-ico-img5.png')";
+        weatherImageElement.style.backgroundImage = "url('weather-ico-img5.png')";
     } else if (weatherCondition.includes('rain')) {
         weatherIconElement.classList.add('fa-rain');
-        weatherImageElement.style.backgroundImage = "url('images/weather-ico-img2.png')";
+        weatherImageElement.style.backgroundImage = "url('weather-ico-img2.png')";
     } else if (weatherCondition.includes('snow')) {
         weatherIconElement.classList.add('fa-snow');
-        weatherImageElement.style.backgroundImage = "url('images/weather-ico-img6.png')";
+        weatherImageElement.style.backgroundImage = "url('weather-ico-img6.png')";
     } else {
         weatherIconElement.classList.add('fa-cloud-sun');
-        weatherImageElement.style.backgroundImage = "url('images/weather-ico-img1.png')";
+        weatherImageElement.style.backgroundImage = "url('weather-ico-img1.png')";
     }
 
     document.getElementById('weather-temp').textContent = data.current.temp_c;
@@ -68,19 +68,19 @@ nextDayCardElement.style.backgroundImage = '';
 // Add appropriate icon based on weather condition for the next day
 if (nextDayWeatherCondition.includes('clear') || nextDayWeatherCondition.includes('sunny')) {
 nextDayIconElement.classList.add('fa-sun');
-nextDayCardElement.style.backgroundImage = "url('images/weather-ico-img1.png')";
+nextDayCardElement.style.backgroundImage = "url('weather-ico-img1.png')";
 } else if (nextDayWeatherCondition.includes('cloud')) {
 nextDayIconElement.classList.add('fa-cloud');
-nextDayCardElement.style.backgroundImage = "url('images/weather-ico-img5.png')";
+nextDayCardElement.style.backgroundImage = "url('weather-ico-img5.png')";
 } else if (nextDayWeatherCondition.includes('rain')) {
 nextDayIconElement.classList.add('fa-rain');
-nextDayCardElement.style.backgroundImage = "url('images/weather-ico-img2.png')";
+nextDayCardElement.style.backgroundImage = "url('weather-ico-img2.png')";
 } else if (nextDayWeatherCondition.includes('snow')) {
 nextDayIconElement.classList.add('fa-snow');
-nextDayCardElement.style.backgroundImage = "url('images/weather-ico-img6.png')";
+nextDayCardElement.style.backgroundImage = "url('weather-ico-img6.png')";
 } else {
 nextDayIconElement.classList.add('fa-cloud-sun');
-nextDayCardElement.style.backgroundImage = "url('images/weather-ico-img1.png')";
+nextDayCardElement.style.backgroundImage = "url('weather-ico-img1.png')";
 }
 
 document.getElementById('weather-temp-next').textContent = nextDayForecast.day.avgtemp_c;
