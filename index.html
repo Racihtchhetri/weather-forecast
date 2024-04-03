@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast Dehradun</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="weather.js"></script>
+    <!-- Font Awesome CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/main-img.jpg" type="image/x-icon">
+    <style>
+        body {
+            background-image: url('images/main-img.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100%;
+            width: 100vw;
+            overflow-x: hidden; /* Prevent body overflow */
+        }
+    
+        .card {
+            margin: 20px 0px;
+        }
+    
+        .weather-card {
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+        }
+    
+        .weather-sunny {
+            background-size: cover;
+            background-position: center;
+            opacity: 0.9;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+            width: 800px; /* Added max-width */
+            height: 400px;
+        }
+    
+        .weather-icon {
+            font-size: 5rem;
+        }
+    
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    
+        @media (max-width: 576px) {
+            .card {
+                width: 400px;
+                height: 360px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand">Weather Forecast</a>
+
+            <!-- Toggler Button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Navbar Items -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Weather</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="time.html">Time</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input id="city" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-dark" type="submit" id="submit">Search</button>
+                  </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Weather Card -->
+        <div class="card weather-sunny" id="weather">
+            <div class="card-body">
+                <h5 class="card-title">Weather Forecast</h5>
+                <h6 class="card-title">Today</h6>
+                <i class="weather-icon fas" id="weather-ico" style="font-size: 48px;"></i>
+                <p class="card-text">Temperature: <span id="weather-temp"></span>°C</p>
+                <p class="card-text">Humidity: <span id="weather-humidity"></span>%</p>
+                <p class="card-text">Wind Speed: <span id="weather-wind-speed"></span> km/h</p>
+                <p class="card-text">Description: <span id="weather-description"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" ">
+        <div class="card weather-sunny" id="weather-next">
+            <div class="card-body">
+                <h5 class="card-title">Weather Forecast</h5>
+                <h6 class="card-title">Tomorrow</h6>
+                <i class="weather-icon fas" id="weather-ico-next" style="font-size: 48px;"></i>
+                <p class="card-text">Temperature: <span id="weather-temp-next"></span>°C</p>
+                <p class="card-text">Humidity: <span id="weather-humidity-next"></span>%</p>
+                <p class="card-text">Wind Speed: <span id="weather-wind-speed-next"></span> km/h</p>
+                <p class="card-text">Description: <span id="weather-description-next"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer mt-auto py-3 bg-dark text-white">
+        <div class="container text-center">
+            <span>by rachit chhetri &copy; 2024 Weather Forecast Dehradun</span>
+        </div>
+    </footer>
+
+</body>
+
+</html>
